@@ -1,0 +1,56 @@
+If your images are already included within your LinkedIn profile, this is the method to pull them out into one single file:
+
+Find: /\postimg.org.*/g 
+Replace: http://$&\n
+
+So you now have all your URLs in the below format:
+http://postimg.org/image/bs574vaol/
+http://postimg.org/image/9mawad785/
+http://postimg.org/image/9a9tx2vyt/
+http://postimg.org/image/8rfhbno0l/
+http://postimg.org/image/e5e9j7dqt/
+http://postimg.org/image/x5icx1ahh/
+http://postimg.org/image/q4ud498ph/
+http://postimg.org/image/o1jxwl8wl/
+http://postimg.org/image/5jl5gdqvp/
+http://postimg.org/image/3t17i3nit/
+http://postimg.org/image/nz4pgzj6d/
+http://postimg.org/image/bow0erntv/
+http://postimg.org/image/opvn4t2ad/
+http://postimg.org/image/wjw8q7a39/
+http://postimg.org/image/wjw8q7a39/
+http://postimg.org/image/6pmg0fa39/
+http://postimg.org/image/61xea3w7p/
+http://postimg.org/image/pvh9kmx1x/
+http://postimg.org/image/l4b06wvkl/
+http://postimg.org/image/l4b06wvkl/
+http://postimg.org/image/vfnczkn9x/
+http://postimg.org/image/qy8y6xo0l/
+http://postimg.org/image/c48pblc5x/
+http://postimg.org/image/c48pblc5x/
+http://postimg.org/image/u8bpw89ud/
+http://postimg.org/image/ewfv1nrh1/
+http://postimg.org/image/4k7ckt239/
+http://postimg.org/image/ydecteqqd/
+http://postimg.org/image/61xea3w7p/
+http://postimg.org/image/bzoqujpp1/
+http://postimg.org/image/osngvm7dh/
+http://postimg.org/image/4cqqvh6qd/
+http://postimg.org/image/cjiqn1wt1/
+http://postimg.org/image/4cqqvh6qd/
+http://postimg.org/image/bux11mrth/
+http://postimg.org/image/6buhkeus5/
+http://postimg.org/image/jt588i991/
+http://postimg.org/image/q7qgzybth/
+http://postimg.org/image/rzx802zbp/
+http://postimg.org/image/ow9zjdidx/
+http://postimg.org/image/amyxkekj9/
+http://postimg.org/image/9xsjl02kt/
+http://postimg.org/image/g53gw0sid/
+
+Paste this into a file say postimg-input.txt
+
+On Linux, run curl:
+xargs -n 1 curl < postimg-input.txt
+
+And there you go, you've visited the site!
